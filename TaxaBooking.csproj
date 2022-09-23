@@ -1,6 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+    <Company>Hurtig Taxa Udvikling Aps</Company>
+    <Authors>Victor</Authors>
+    <Copyright>2022 HTU Aps</Copyright>
+
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
