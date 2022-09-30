@@ -18,8 +18,8 @@ public class BookingController : ControllerBase
     {
         _logger = logger;
 
-        //var factory = new ConnectionFactory() { HostName = "localhost" };
-        var factory = new ConnectionFactory() { HostName = "172.17.0.2" };
+        var factory = new ConnectionFactory() { HostName = "localhost" };
+        //var factory = new ConnectionFactory() { HostName = "172.17.0.2" };
         connection = factory.CreateConnection();
     }
 
