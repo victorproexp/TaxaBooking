@@ -26,6 +26,9 @@ public class BookingController : ControllerBase
     [HttpPost]
     public Booking CreateBooking(Booking booking)
     {
+        _logger.LogInformation("CreateBooking called at {DT}",
+            DateTime.UtcNow.ToLongTimeString());
+
         booking.Id = nextId++;
         booking.Tidsstempel = DateTime.Now;
 
