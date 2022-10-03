@@ -55,6 +55,9 @@ public class BookingController : ControllerBase
     [HttpGet("version")]
     public IEnumerable<string> Get()
     {
+        _logger.LogInformation("Get called at {DT}",
+            DateTime.UtcNow.ToLongTimeString());
+
         var properties = new List<string>();
         var assembly = typeof(Program).Assembly;
         foreach (var attribute in assembly.GetCustomAttributesData())
