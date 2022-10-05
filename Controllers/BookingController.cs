@@ -14,12 +14,15 @@ public class BookingController : ControllerBase
 
     private static int nextId;
 
-    public BookingController(ILogger<BookingController> logger)
+    public BookingController(ILogger<BookingController> logger, IConfiguration configuration)
     {
         _logger = logger;
 
+        var mqhost = configuration["TaxaBookingBrokerHost"];
+
         //var factory = new ConnectionFactory() { HostName = "localhost" };
-        var factory = new ConnectionFactory() { HostName = "172.17.0.2" };
+        //var factory = new ConnectionFactory() { HostName = "172.17.0.2" };
+        var factory = new ConnectionFactory() { HostName = mqhost };
         connection = factory.CreateConnection();
     }
 
